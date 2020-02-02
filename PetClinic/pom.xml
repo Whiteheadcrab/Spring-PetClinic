@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>petclinicData</module>
+        <module>petclinicWeb</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
