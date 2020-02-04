@@ -14,7 +14,7 @@
     </parent>
     <groupId>whiteheadcrab.java</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>spring-petclinic</name>
     <description>Creating Pet Clinic aplication using Spring</description>
 
@@ -44,7 +44,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/Whiteheadcrab/Spring-PetClinic.git</developerConnection>
-      <tag>spring-petclinic-0.0.1</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
