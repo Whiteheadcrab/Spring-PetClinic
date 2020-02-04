@@ -36,6 +36,7 @@
                     <checkModificationExcludes>
                         <checkModificationExclude>pom.xml</checkModificationExclude>
                         <checkModificationExclude>**</checkModificationExclude>
+                        <autoVersionSubmodules>true</autoVersionSubmodules>
                     </checkModificationExcludes>
                 </configuration>
             </plugin>
