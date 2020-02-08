@@ -7,7 +7,7 @@ import java.util.Set;
 public interface PetService
 {
 
-    whiteheadcrab.java.springpetclinic.model.Pet findById(Long id);
+    Pet findById(Long id);
 
     Pet save(Pet pet);
 
