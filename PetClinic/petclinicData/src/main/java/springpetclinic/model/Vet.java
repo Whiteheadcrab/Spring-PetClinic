@@ -1,4 +1,4 @@
-package whiteheadcrab.java.springpetclinic.model;
+package springpetclinic.model;
 
 public class Vet extends Person
 {

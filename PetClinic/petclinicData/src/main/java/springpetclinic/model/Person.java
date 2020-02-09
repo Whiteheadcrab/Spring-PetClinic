@@ -1,6 +1,8 @@
-package whiteheadcrab.java.springpetclinic.model;
+package springpetclinic.model;
 
-public class Person
+import springpetclinic.model.BaseEntity;
+
+public class Person extends BaseEntity
 {
     private String firstName;
     private String lastName;

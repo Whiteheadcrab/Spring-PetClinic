@@ -1,6 +1,8 @@
-package whiteheadcrab.java.springpetclinic.model;
+package springpetclinic.model;
 
-public class PetType
+import springpetclinic.model.BaseEntity;
+
+public class PetType extends BaseEntity
 {
     private  String name;
 

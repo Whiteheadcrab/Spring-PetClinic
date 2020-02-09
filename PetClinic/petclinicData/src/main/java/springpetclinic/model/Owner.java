@@ -1,4 +1,5 @@
-package whiteheadcrab.java.springpetclinic.model;
+package springpetclinic.model;
+
 
 public class Owner extends Person
 {

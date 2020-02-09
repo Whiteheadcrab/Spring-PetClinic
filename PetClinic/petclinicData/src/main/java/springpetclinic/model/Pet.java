@@ -1,8 +1,9 @@
-package whiteheadcrab.java.springpetclinic.model;
+package springpetclinic.model;
 
+import springpetclinic.model.BaseEntity;
 import java.time.LocalDate;
 
-public class Pet
+public class Pet extends BaseEntity
 {
     private PetType getType;
     private Owner owner;
