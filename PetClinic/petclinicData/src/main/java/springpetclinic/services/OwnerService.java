@@ -1,6 +1,6 @@
 package springpetclinic.services;
 
-import whiteheadcrab.java.springpetclinic.model.Owner ;
+import springpetclinic.model.Owner;
 
 import java.util.Set;
 
