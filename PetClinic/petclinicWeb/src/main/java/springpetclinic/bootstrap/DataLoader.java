@@ -1,7 +1,6 @@
 package springpetclinic.bootstrap;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import springpetclinic.model.Owner;
 import springpetclinic.model.PetType;
@@ -12,7 +11,6 @@ import springpetclinic.services.VetService;
 
 
 @Component
-@ComponentScan("/services")
 public class DataLoader implements CommandLineRunner
 {
     private final OwnerService ownerService;
@@ -40,17 +38,20 @@ public class DataLoader implements CommandLineRunner
         Owner owner1 = new Owner();
         owner1.setFirstName("Michal");
         owner1.setLastName("Andriev");
+        owner1.setAddress("123 Brieckers street");
+        owner1.setCity("1234567867");
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Anton");
         owner2.setLastName("Svirgov");
+        owner2.setAddress("123 Brieckers street");
+        owner2.setCity("1234567867");
 
         ownerService.save(owner2);
 
         System.out.println("Loaded Owners....");
-
 
         Vet vet1 = new Vet();
         vet1.setFirstName("Sem");
