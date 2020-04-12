@@ -3,11 +3,14 @@ package springpetclinic.bootstrap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 import springpetclinic.model.Owner;
+import springpetclinic.model.Pet;
 import springpetclinic.model.PetType;
 import springpetclinic.model.Vet;
 import springpetclinic.services.OwnerService;
 import springpetclinic.services.PetTypeService;
 import springpetclinic.services.VetService;
+
+import java.time.LocalDate;
 
 
 @Component
@@ -43,14 +46,27 @@ public class DataLoader implements CommandLineRunner
         owner1.setTelephone("1234567867");
         ownerService.save(owner1);
 
+        Pet mikesPet = new Pet();
+        mikesPet.setPetType(saveDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+        mikesPet.setPetname("Rosco");
+        owner1.getPets().add(mikesPet);
+
         Owner owner2 = new Owner();
         owner2.setFirstName("Anton");
         owner2.setLastName("Svirgov");
         owner2.setAddress("123 Brieckers street");
         owner2.setCity("Miami");
         owner2.setTelephone("1234567867");
-
         ownerService.save(owner2);
+
+        Pet antonPet = new Pet();
+        antonPet.setPetType(saveCatPetType);
+        antonPet.setOwner(owner2);
+        antonPet.setBirthDate(LocalDate.now());
+        antonPet.setPetname("Fiora");
+        owner2.getPets().add(antonPet);
 
         System.out.println("Loaded Owners....");
 
