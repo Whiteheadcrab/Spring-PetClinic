@@ -1,6 +1,8 @@
 package springpetclinic.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import springpetclinic.model.Owner;
 import springpetclinic.model.Pet;
@@ -14,13 +16,15 @@ import java.time.LocalDate;
 
 
 @Component
+@ComponentScan("springpetclinic.services")
 public class DataLoader implements CommandLineRunner
 {
     private final OwnerService ownerService;
     private final VetService vetService;
     private final PetTypeService petTypeService;
 
-    public  DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService)
+    @Autowired
+    public DataLoader(PetTypeService petTypeService , OwnerService ownerService, VetService vetService)
     {
         this.ownerService = ownerService;
         this.vetService = vetService;
