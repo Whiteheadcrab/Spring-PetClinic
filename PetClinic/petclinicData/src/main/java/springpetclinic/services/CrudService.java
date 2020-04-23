@@ -1,6 +1,5 @@
 package springpetclinic.services;
 
-import springpetclinic.model.Owner;
 
 import java.util.Set;
 

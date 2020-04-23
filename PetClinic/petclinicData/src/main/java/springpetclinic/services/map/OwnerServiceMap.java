@@ -2,7 +2,6 @@ package springpetclinic.services.map;
 
 import springpetclinic.model.Owner;
 import springpetclinic.model.Pet;
-import springpetclinic.model.PetType;
 import springpetclinic.services.CrudService;
 import springpetclinic.services.PetService;
 import springpetclinic.services.PetTypeService;
