@@ -1,5 +1,6 @@
 package springpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import springpetclinic.model.Owner;
 import springpetclinic.model.Pet;
 import springpetclinic.services.CrudService;
@@ -8,6 +9,7 @@ import springpetclinic.services.PetTypeService;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstactMapService<Owner, Long> implements CrudService<Owner , Long>
 {
     private final PetTypeService petTypeService;
