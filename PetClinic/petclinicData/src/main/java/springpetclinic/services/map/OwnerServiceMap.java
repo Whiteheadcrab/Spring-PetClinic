@@ -3,14 +3,14 @@ package springpetclinic.services.map;
 import org.springframework.stereotype.Service;
 import springpetclinic.model.Owner;
 import springpetclinic.model.Pet;
-import springpetclinic.services.CrudService;
+import springpetclinic.services.OwnerService;
 import springpetclinic.services.PetService;
 import springpetclinic.services.PetTypeService;
 
 import java.util.Set;
 
 @Service
-public class OwnerServiceMap extends AbstactMapService<Owner, Long> implements CrudService<Owner , Long>
+public class OwnerServiceMap extends AbstactMapService<Owner, Long> implements OwnerService
 {
     private final PetTypeService petTypeService;
     private final PetService petService;
@@ -78,5 +78,10 @@ public class OwnerServiceMap extends AbstactMapService<Owner, Long> implements C
     public void deleteById(Long id)
     {
         this.deleteById(id);
+    }
+
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
     }
 }
