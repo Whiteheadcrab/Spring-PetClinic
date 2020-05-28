@@ -1,5 +1,6 @@
 package springpetclinic.services.map;
 
+import org.springframework.stereotype.Service;
 import springpetclinic.model.Speciality;
 import springpetclinic.model.Vet;
 import springpetclinic.services.CrudService;
@@ -7,6 +8,7 @@ import springpetclinic.services.SpecialityService;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstactMapService<Vet , Long> implements CrudService<Vet, Long>
 {
     private final SpecialityService specialityService;
