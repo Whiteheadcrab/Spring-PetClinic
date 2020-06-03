@@ -5,10 +5,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import springpetclinic.model.*;
-import springpetclinic.services.OwnerService;
-import springpetclinic.services.PetTypeService;
-import springpetclinic.services.SpecialityService;
-import springpetclinic.services.VetService;
+import springpetclinic.services.*;
 
 import java.time.LocalDate;
 
@@ -21,15 +18,19 @@ public class DataLoader implements CommandLineRunner
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     @Autowired
-    public DataLoader(PetTypeService petTypeService, OwnerService ownerService, VetService vetService, SpecialityService specialityService)
-    {
+    public DataLoader(OwnerService ownerService, VetService vetService,
+                      PetTypeService petTypeService, SpecialityService specialityService,
+                      VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
+
 
     @Override
     public void run(String... args) throws Exception
@@ -69,7 +70,6 @@ public class DataLoader implements CommandLineRunner
         owner1.setAddress("123 Brieckers street");
         owner1.setCity("Miami");
         owner1.setTelephone("1234567867");
-        ownerService.save(owner1);
 
         Pet mikesPet = new Pet();
         mikesPet.setPetType(saveDogPetType);
@@ -78,13 +78,14 @@ public class DataLoader implements CommandLineRunner
         mikesPet.setPetname("Rosco");
         owner1.getPets().add(mikesPet);
 
+        ownerService.save(owner1);
+
         Owner owner2 = new Owner();
         owner2.setFirstName("Anton");
         owner2.setLastName("Svirgov");
         owner2.setAddress("123 Brieckers street");
         owner2.setCity("Miami");
         owner2.setTelephone("1234567867");
-        ownerService.save(owner2);
 
         Pet antonPet = new Pet();
         antonPet.setPetType(saveCatPetType);
@@ -93,6 +94,15 @@ public class DataLoader implements CommandLineRunner
         antonPet.setPetname("Fiora");
         owner2.getPets().add(antonPet);
 
+        ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(antonPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Kitty");
+
+
+        visitService.save(catVisit);
         System.out.println("Loaded Owners....");
 
         Vet vet1 = new Vet();

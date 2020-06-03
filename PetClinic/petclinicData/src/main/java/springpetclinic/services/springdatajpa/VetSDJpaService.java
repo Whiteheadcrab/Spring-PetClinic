@@ -3,7 +3,6 @@ package springpetclinic.services.springdatajpa;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import springpetclinic.model.Vet;
-import springpetclinic.repositories.SpecialityRepository;
 import springpetclinic.repositories.VetRepository;
 import springpetclinic.services.VetService;
 
