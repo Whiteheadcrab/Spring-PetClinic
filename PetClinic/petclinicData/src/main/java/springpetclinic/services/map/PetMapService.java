@@ -1,5 +1,6 @@
 package springpetclinic.services.map;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 import springpetclinic.model.Pet;
 import springpetclinic.services.PetService;
@@ -7,6 +8,7 @@ import springpetclinic.services.PetService;
 import java.util.Set;
 
 @Service
+@Profile({"default","map"})
 public class PetMapService extends AbstactMapService<Pet, Long> implements PetService
 {
     @Override

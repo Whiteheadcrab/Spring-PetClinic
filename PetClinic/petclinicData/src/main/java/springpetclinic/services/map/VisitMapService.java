@@ -9,7 +9,7 @@ import springpetclinic.services.VisitService;
 import java.util.Set;
 
 @Service
-@Profile("springjpadata")
+@Profile({"default","map"})
 public class VisitMapService extends AbstactMapService<Visit , Long> implements VisitService
 {
     private final VisitRepository visitRepository;
