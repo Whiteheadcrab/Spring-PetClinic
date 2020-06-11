@@ -6,6 +6,7 @@ which represent database and services for upating and manipulating with data , b
 Addtional aims :
 - Used for personalized Spring Launching image
 - Used for practising with Project Lombock
+- Used for practising with rebasing in Git 
 
 Used in creating this project : Java , Spring , Spring Boot DevTools , Lombok , Web , 
 Thymeleaf , MySQL , H2 , Ops - Actuator , JPA 
