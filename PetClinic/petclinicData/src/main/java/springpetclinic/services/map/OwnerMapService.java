@@ -73,17 +73,22 @@ public class OwnerMapService extends AbstactMapService<Owner, Long> implements O
     @Override
     public void delete(Owner object)
     {
-        this.delete(object);
+        super.delete(object);
     }
 
     @Override
     public void deleteById(Long id)
     {
-        this.deleteById(id);
+        super.deleteById(id);
     }
 
     @Override
-    public Owner findByLastName(String lastName) {
-        return null;
+    public Owner findByLastName(String lastName)
+    {
+        return this.findAll()
+                .stream()
+                .filter(owner -> owner.getLastName().equalsIgnoreCase(lastName))
+                .findFirst()
+                .orElse(null);
     }
 }
