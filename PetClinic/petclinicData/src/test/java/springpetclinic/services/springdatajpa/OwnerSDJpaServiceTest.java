@@ -36,11 +36,11 @@ class OwnerSDJpaServiceTest {
     @InjectMocks
     OwnerSDJpaService ownerSDJpaService;
 
-    String LAST_Name;
-    Owner returnOwner;
+    static String LAST_Name;
+    static Owner returnOwner;
 
     @BeforeAll
-    void SetUp()
+    static void SetUp()
     {
         LAST_Name = "Smith";
         returnOwner = Owner.builder().id(1l).lastName(LAST_Name).build();
