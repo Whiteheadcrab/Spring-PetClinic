@@ -23,7 +23,8 @@ public class DataLoader implements CommandLineRunner
     @Autowired
     public DataLoader(OwnerService ownerService, VetService vetService,
                       PetTypeService petTypeService, SpecialityService specialityService,
-                      VisitService visitService) {
+                      VisitService visitService)
+    {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;

@@ -22,14 +22,16 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-class OwnerSDJpaServiceTest {
+public class OwnerSDJpaServiceTest {
 
     @Mock
     OwnerRepository ownerRepository;
 
+    //For future implementations
     @Mock
     PetRepository petRepository;
 
+    //For future implementations
     @Mock
     PetTypeRepository petTypeRepository;
 

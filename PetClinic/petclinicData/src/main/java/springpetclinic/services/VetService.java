@@ -6,5 +6,4 @@ import springpetclinic.model.Vet;
 @Service
 public interface VetService extends CrudService<Vet , Long>
 {
-
 }

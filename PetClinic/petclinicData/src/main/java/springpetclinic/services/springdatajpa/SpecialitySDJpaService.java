@@ -21,29 +21,34 @@ public class SpecialitySDJpaService implements SpecialityService
     }
 
     @Override
-    public Set<Speciality> findAll() {
+    public Set<Speciality> findAll()
+    {
         Set<Speciality> specialities = new HashSet<>();
         specialityRepository.findAll().forEach(specialities::add);
         return specialities;
     }
 
     @Override
-    public Speciality findById(Long aLong) {
+    public Speciality findById(Long aLong)
+    {
         return specialityRepository.findById(aLong).orElse(null);
     }
 
     @Override
-    public Speciality save(Speciality object) {
+    public Speciality save(Speciality object)
+    {
         return specialityRepository.save(object);
     }
 
     @Override
-    public void delete(Speciality object) {
+    public void delete(Speciality object)
+    {
         specialityRepository.delete(object);
     }
 
     @Override
-    public void deleteById(Long aLong) {
+    public void deleteById(Long aLong)
+    {
         specialityRepository.deleteById(aLong);
     }
 }

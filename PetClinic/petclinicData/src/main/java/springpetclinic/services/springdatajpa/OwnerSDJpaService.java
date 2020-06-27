@@ -17,6 +17,7 @@ import java.util.Set;
 public class OwnerSDJpaService  implements OwnerService
 {
     private final OwnerRepository ownerRepository;
+    //For future implementations
     private final PetRepository petRepository;
     private final PetTypeRepository petTypeRepository;
 

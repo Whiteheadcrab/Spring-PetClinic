@@ -10,7 +10,8 @@ public class VetController
 {
     private final VetService vetService;
 
-    public VetController(VetService vetService) {
+    public VetController(VetService vetService)
+    {
         this.vetService = vetService;
     }
 
@@ -18,7 +19,6 @@ public class VetController
     public String listVets(Model model)
     {
         model.addAttribute("vets",vetService.findAll());
-
         return  "vets/index";
     }
 }
