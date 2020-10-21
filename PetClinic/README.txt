@@ -8,6 +8,7 @@ Addtional aims :
 - Used for practising with Project Lombock
 - Used for practising with rebasing in Git 
 - Used for practising with Circle CI
+- Used for working with Git Branches
 
 Used in creating this project : Java , Spring , Spring Boot DevTools , Lombok , Web , 
 Thymeleaf , MySQL , H2 , Ops - Actuator , JPA 
