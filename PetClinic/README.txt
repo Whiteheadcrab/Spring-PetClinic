@@ -3,7 +3,7 @@ Project consist of 2 part of implementations : Web , which represent web pages f
 which represent database and services for upating and manipulating with data , backend .
 
 
-Addtional aims :
+Additional aims :
 - Used for personalized Spring Launching image
 - Used for practising with Project Lombock
 - Used for practising with rebasing in Git 
