@@ -32,7 +32,7 @@ class OwnerControllerTest {
     MockMvc mockMvc;
 
     @BeforeEach
-    void SetUp()
+    public void SetUp()
     {
         owners.add(Owner.builder().id(1l).build());
         owners.add(Owner.builder().id(2l).build());
@@ -88,7 +88,8 @@ class OwnerControllerTest {
     }
 
     @Test
-    void findOwners() throws Exception {
+    public void findOwners() throws Exception
+    {
         mockMvc.perform(get("/owners/find"))
                 .andExpect(status().isOk())
                 .andExpect(view().name("owner/findOwner"))
@@ -98,7 +99,7 @@ class OwnerControllerTest {
     }
 
     @Test
-    void processFindFormReturnMany() throws Exception
+    public void processFindFormReturnMany() throws Exception
     {
         when(ownerService.findAllByLastNameLike(anyString()))
                 .thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
@@ -111,7 +112,7 @@ class OwnerControllerTest {
     }
 
     @Test
-    void processFindFormReturnOne() throws Exception
+    public void processFindFormReturnOne() throws Exception
     {
         when(ownerService.findAllByLastNameLike(anyString())).thenReturn(Arrays.asList(Owner.builder().id(1l).build()));
 
@@ -121,7 +122,7 @@ class OwnerControllerTest {
     }
 
     @Test
-    void processFindFormEmptyReturnMany() throws Exception
+    public void processFindFormEmptyReturnMany() throws Exception
     {
         when(ownerService.findAllByLastNameLike(anyString()))
                 .thenReturn(Arrays.asList(Owner.builder().id(1l).build(),
