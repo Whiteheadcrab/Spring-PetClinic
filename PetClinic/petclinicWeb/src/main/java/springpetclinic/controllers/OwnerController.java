@@ -89,35 +89,44 @@ public class OwnerController
     }
 
     @GetMapping("/new")
-    public String initCreationForm(Model model) {
+    public String initCreationForm(Model model)
+    {
         model.addAttribute("owner", Owner.builder().build());
         return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
     }
 
     @PostMapping("/new")
-    public String processCreationForm(@Valid Owner owner, BindingResult result) {
-        if (result.hasErrors()) {
+    public String processCreationForm(@Valid Owner owner, BindingResult result)
+    {
+        if (result.hasErrors())
+            {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
-        } else {
+            }
+        else
+            {
             Owner savedOwner =  ownerService.save(owner);
             return "redirect:/owners/" + savedOwner.getId();
-        }
+            }
     }
 
     @GetMapping("/{ownerId}/edit")
-    public String initUpdateOwnerForm(@PathVariable Long ownerId, Model model) {
+    public String initUpdateOwnerForm(@PathVariable Long ownerId, Model model)
+    {
         model.addAttribute(ownerService.findById(ownerId));
         return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
     }
 
     @PostMapping("/{ownerId}/edit")
-    public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable Long ownerId) {
-        if (result.hasErrors()) {
+    public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result, @PathVariable Long ownerId)
+    {
+        if (result.hasErrors())
+        {
             return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
-        } else {
+        } else
+            {
             owner.setId(ownerId);
             Owner savedOwner = ownerService.save(owner);
             return "redirect:/owners/" + savedOwner.getId();
-        }
+            }
     }
 }
