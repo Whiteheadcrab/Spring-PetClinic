@@ -43,7 +43,6 @@ public class PetControllerTest
     PetController petController;
 
     MockMvc mockMvc;
-
     Owner owner;
     Set<PetType> petTypes;
 
