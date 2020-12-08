@@ -47,7 +47,7 @@ public class PetControllerTest
     Set<PetType> petTypes;
 
     @BeforeEach
-    public void setUp()
+    public void setUp() throws Exception
     {
         owner = Owner.builder().id(1l).build();
 

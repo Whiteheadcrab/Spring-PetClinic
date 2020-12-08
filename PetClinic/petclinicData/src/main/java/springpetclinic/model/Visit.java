@@ -28,5 +28,4 @@ public class Visit extends BaseEntity
     {
         return date;
     }
-
 }

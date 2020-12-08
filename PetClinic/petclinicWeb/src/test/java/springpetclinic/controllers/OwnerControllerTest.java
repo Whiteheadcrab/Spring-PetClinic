@@ -21,7 +21,8 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
-class OwnerControllerTest {
+class OwnerControllerTest
+{
 
     @Mock
     static OwnerService ownerService;
@@ -34,7 +35,7 @@ class OwnerControllerTest {
     MockMvc mockMvc;
 
     @BeforeEach
-    public void SetUp()
+    public void SetUp()  throws Exception
     {
         owners.add(Owner.builder().id(1l).build());
         owners.add(Owner.builder().id(2l).build());
@@ -45,28 +46,6 @@ class OwnerControllerTest {
                 .build();
     }
 
-/*    @Test
-    void listOwners() throws Exception
-    {
-        when(ownerService.findAll()).thenReturn(owners);
-
-        mockMvc.perform(get("/owners"))
-                .andExpect(status().isOk())
-                .andExpect(view().name("owners/findOwners"))
-                .andExpect(model().attribute("owners",hasSize(2)));
-
-    }*/
-
- /*   @Test
-    void listOwnersbyIndex() throws Exception
-    {
-        when(ownerService.findAll()).thenReturn(owners);
-
-        mockMvc.perform(get("/owners/index"))
-                .andExpect(view().name("owners/index"))
-                .andExpect(model().attribute("owners",hasSize(2)));
-
-    }*/
 
     @Test
     public void findOwner() throws Exception

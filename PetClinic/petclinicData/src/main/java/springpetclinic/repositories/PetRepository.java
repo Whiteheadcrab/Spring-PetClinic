@@ -5,4 +5,5 @@ import springpetclinic.model.Pet;
 
 public interface PetRepository extends CrudRepository<Pet , Long>
 {
+
 }
