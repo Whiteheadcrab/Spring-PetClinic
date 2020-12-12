@@ -21,7 +21,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @ExtendWith(MockitoExtension.class)
-class OwnerControllerTest
+public class OwnerControllerTest
 {
 
     @Mock
@@ -45,7 +45,6 @@ class OwnerControllerTest
                 .standaloneSetup(ownerController)
                 .build();
     }
-
 
     @Test
     public void findOwner() throws Exception
